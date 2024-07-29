@@ -60,6 +60,9 @@ export const onHomePage: OnHomePageHandler = async () => {
   // Parse the records
   console.log(actions);
 
+  // sort action from latest to the oldest
+  actions.sort((a, b) => b.timestamp - a.timestamp);
+
   // Render in the home page
   // Important data
   // 1. name of the domain , chainId , maybe verifyingContract
