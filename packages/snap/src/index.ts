@@ -75,7 +75,7 @@ export const onHomePage: OnHomePageHandler = async () => {
             divider(),
             heading(`Action : ${action.primaryType}`),
             row(action.domain.name, text(`${action.domain.chainId}`)),
-            text(`Timestamp : ${action.timestamp}`),
+            text(`Timestamp : ${new Date(action.timestamp).toUTCString()}`),
             copyable(JSON.stringify(action.message)),
           ]),
       ),
